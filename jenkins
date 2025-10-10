@@ -2,14 +2,11 @@ pipeline {     agent any
     tools {
         maven 'my-maven'
     }
-    environment {
-        QA_SERVER = 'http://172.31.37.165:8080'
-        TOMCAT_USER = 'admin'
-        TOMCAT_PASS = '12345'     }
+    
     stages {         stage('Clone') {
             steps {
                 echo 'Cloning the repository...'
-                git branch: 'master', url: 'https://github.com/Become-DevOps/DevOpsClassCodes.git'
+                git branch: 'master', url: ''
             }
         }
         stage('Compile') {             steps {
