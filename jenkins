@@ -6,7 +6,7 @@ pipeline {     agent any
     stages {         stage('Clone') {
             steps {
                 echo 'Cloning the repository...'
-                git branch: 'master', url: ''
+                git branch: 'master', url: 'https://github.com/CPabhinav/DevOpsClassCodes.git'
             }
         }
         stage('Compile') {             steps {
